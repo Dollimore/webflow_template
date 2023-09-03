@@ -1,0 +1,89 @@
+/* <script src="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js"></script>
+/* <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+
+/* <style> */
+
+
+.mapboxgl-popup-content {
+    pointer-events: auto;
+    border-radius: 4px;
+    box-shadow: none;
+    color: #161616;
+    background-color: #FFFFFF;
+    padding: 0; /* Remove padding to eliminate whitespace */
+    border: 1.5px solid #000000;
+}
+
+/* Popup bottom arrow color */
+.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
+    border-top-color: #FFFFFF;
+    border: 1.5px solid #000000;
+}
+
+.p1, .lAddress{
+	margin-left: 15px;
+}
+
+.p1 {
+    font-size: 16px;
+    color: #868686;
+    margin: 10px;
+}
+
+.mapboxgl-popup-content {
+  pointer-events: auto;
+  border-radius: 4px;
+  box-shadow: none;
+  color: #161616;
+  background-color: #FFFFFF;
+  padding: 0; /* Remove padding to eliminate whitespace */
+  border: 1.5px solid #000000;
+}
+
+/* Popup bottom arrow color */
+.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
+  border-top-color: #FFFFFF;
+  border: 1.5px solid #000000;
+}
+
+.p1, .lAddress{
+margin-left: 15px;
+}
+
+.p1 {
+  font-size: 16px;
+  color: #868686;
+  margin: 10px;
+}
+
+.lAddress {
+  font-size: 18px;
+  margin: 10px; /* Adjust margin for equal spacing (vertical: 10px, horizontal: 0) */
+  color: #000000;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* Hide the overflow */
+  outline: 0 !important;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
+}
+
+.lAddress a:focus {
+    outline: none; /* Remove the blue border/marks when the link is focused */
+}
+
+.lAddress:hover {
+    filter: brightness(130%); /* Increase brightness by 10% on hover */
+}
+
+.popup-image {
+  max-height: 150px;
+  max-width: 200px;
+  border-bottom: 1px;
+}
+
+/* Hide the close button */
+.mapboxgl-popup-close-button {
+  display: none !important;
+}
+/* </style> */
