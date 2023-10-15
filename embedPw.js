@@ -6,13 +6,28 @@ document.addEventListener("DOMContentLoaded", function() {
     const passwordErrorDiv = document.querySelector('#password_error');
 
     function validatePasswords() {
-        if (passwordInput.value === confirmPasswordInput.value) {
-            submitButton.style.display = 'block';
-            passwordErrorDiv.style.display = 'none';
+        const passwordValue = passwordInput.value;
+        const confirmPasswordValue = confirmPasswordInput.value;
+
+        // Check if passwords match
+        if (passwordValue === confirmPasswordValue) {
+            // Check if passwords meet complexity requirements
+            if (
+                passwordValue.length >= 8 &&
+                /\d/.test(passwordValue) // Check if the password contains at least one digit
+            ) {
+                submitButton.style.display = 'block';
+                passwordErrorDiv.style.display = 'none';
+            } else {
+                submitButton.style.display = 'none';
+                passwordErrorDiv.style.display = 'block';
+                passwordErrorDiv.innerText = 'Password must be at least 8 characters long and contain at least one number.';
+                passwordErrorDiv.style.color = 'red';
+            }
         } else {
             submitButton.style.display = 'none';
             passwordErrorDiv.style.display = 'block';
-            passwordErrorDiv.innerText = 'Passwords must match';
+            passwordErrorDiv.innerText = 'Passwords must match.';
             passwordErrorDiv.style.color = 'red';
         }
     }
